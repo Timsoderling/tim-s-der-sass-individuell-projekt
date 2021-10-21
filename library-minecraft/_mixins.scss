@@ -1,0 +1,72 @@
+@mixin fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+@mixin adjustCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin adjust($position) {
+    display: flex;
+    justify-content: $position;
+    align-items: center;
+}
+@mixin box($color) {
+    box-shadow: $myShadow;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 55px;
+    width: 35vw;
+    height: 30vh;
+    padding: 25px;
+    background-color: $color;
+    @include adjustCenter;
+    flex-direction: column;
+    text-align: center;
+}
+@mixin bg($url) {
+    background-image: url($url);
+    background-size: cover;
+}
+@mixin xlHeading($color) {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 5px;
+    color: $color;
+    font-size: 5vh;
+}
+@mixin xxlHeading($color) {
+    font-family: 'Open Sans';
+    font-size: 30vh;
+    color: $color;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 7s;
+    -moz-animation: fadeIn linear 7s;
+    -o-animation: fadeIn linear 7s;
+    -ms-animation: fadeIn linear 7s;
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-ms-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+}
+
